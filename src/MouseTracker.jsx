@@ -9,9 +9,11 @@ function MouseTracker() {
       setMousePosition({x: event.clientX, y: event.clientY});
     }
     window.addEventListener('mousemove',handelMouseMove);
+    console.log("Mouse listener added");
 
     return () => {
       window.removeEventListener('mousemove', handelMouseMove)
+      console.log("Mouse listener remmoved");
       
     };
 
